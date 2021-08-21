@@ -23,4 +23,5 @@ print "BED file length is $base_num\(bp)\n";
 
 #assume dup rate is 0%
 my $num = int($cov*$base_num/$readlen);
-print "to get theory depth $cov\X, you should extract $num reads ($readlen bp)\n";
+my $c = $cov.'X';
+print "to get theory depth $c, you should extract $num reads ($readlen bp)\n";
