@@ -5,16 +5,23 @@ downsampling reads from fastq1/2 files
 `perl /home/fulongfei/git_repo/subfq/subfq.pl -fq1 $fq1 -fq2 $fq2 -num $num -fa $fa -o $PWD -n ILMN -bed $bed`
 
 `-fq1`: fq1 file
+
 `-fq2`: fq2 file
+
 `-num`: reads num to extract
+
 `-len`: read length
+
 `-n`  : name
+
 `-fa` : ref fasta
+
 `-bed`: BED file
+
 `-o`  : output dir
 
 # Output file
-the output file is <name>.subfq.sh. you can `sh *.subfq.sh &` directly on linux.
+the output file is <sample_name>.subfq.sh. you can `sh *.subfq.sh &` directly on linux.
 
 # Steps
 1) downsamping
@@ -25,10 +32,11 @@ the output file is <name>.subfq.sh. you can `sh *.subfq.sh &` directly on linux.
 6) calculate target depth (need BED file)
 7) calculate the theory depth based on: a)reads num; b)read length; c)target length
 
-### Infer the theory depth based on the downsampled reads
+# Q&A
+Q: Infer the theory depth based on the downsampled reads
 A: theory depth = read_length * reads_num / target_length_bp
 
-### Infer how many reads you should extract when you want to get a certain depth?
+Q: Infer how many reads you should extract when you want to get a certain depth?
 A: reads_num = target_length_bp * wanted_depth / target_length_bp
 you can use `subfq/bin/reads2depth.pl` to calculate how many reads you should to extract.
 
