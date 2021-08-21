@@ -34,13 +34,16 @@ the output file is `<sample_name>.subfq.sh`. you can `sh *.subfq.sh &` directly 
 
 # Q&A
 Q: Infer the theory depth based on the downsampled reads
+
 A: theory depth = read_length * reads_num / target_length_bp
 
 Q: Infer how many reads you should extract when you want to get a certain depth?
+
 A: reads_num = target_length_bp * wanted_depth / target_length_bp
+
 you can use `subfq/bin/reads2depth.pl` to calculate how many reads you should to extract.
 
-##### Example
+Example
 `perl /path/subfq/bin/reads2depth.pl 100 20`
 `100`: read length
 `20`: I want to get 20X mean coverage
