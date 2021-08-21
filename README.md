@@ -21,7 +21,7 @@ downsampling reads from fastq1/2 files
 `-o`  : output dir
 
 # Output file
-the output file is <sample_name>.subfq.sh. you can `sh *.subfq.sh &` directly on linux.
+the output file is `<sample_name>.subfq.sh`. you can `sh *.subfq.sh &` directly on linux.
 
 # Steps
 1) downsamping
